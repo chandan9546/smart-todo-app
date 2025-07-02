@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Todo List App</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+     <link rel="stylesheet" href="Style_SmartToDoApp.css"/>
+</head>
+<body>
+    <div class="container mt-4">
+    <h2 class="text-center mb-4">📝 My Todo List</h2>
+
+    <div class="row g-2 mb-3">
+      <div class="col-md-4">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search task...">
+      </div>
+
+      <div class="col-md-3">
+        <input type="date" id="fromDate" class="form-control">
+      </div>
+      <div class="col-md-3">
+        <input type="date" id="toDate" class="form-control">
+      </div>
+
+      <div class="col-md-2">
+        <button class="btn btn-primary w-100" onclick="applyFilters()">Filter</button>
+      </div>
+    </div>
+
+    <ul id="todoList" class="list-group mb-3"></ul>
+
+    <nav>
+      <ul class="pagination justify-content-center" id="pagination"></ul>
+    </nav>
+
+    <div class="card p-3 shadow-sm">
+      <h5 class="mb-3">Add New Task</h5>
+      <input type="text" id="newTask" class="form-control mb-2" placeholder="Enter task name">
+      <button class="btn btn-success w-100" onclick="addTodo()">Add Task</button>
+    </div>
+
+    <div id="loading" class="text-center mt-3 d-none">Loading...</div>
+    <div id="error" class="alert alert-danger mt-3 d-none"></div>
+  </div>
+   <script src="task-handler.js"></script>
+
+</body>
+</html>

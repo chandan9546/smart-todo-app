@@ -1,0 +1,9 @@
+body {
+  background-color: white;
+}
+.card {
+  background-color: white;
+}
+#todoList li {
+  font-weight: 500;
+}
